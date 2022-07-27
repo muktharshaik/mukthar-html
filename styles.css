@@ -1,17 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --textColor: #4F4F4F;
+  --formLabel: #828282;
+  --primary: #1660CF;
+}
+
+.default_box{
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.14);
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
 body{ 
   background-color: #e2e2e2;
   padding: 10% 15%;
 }
 
+.hide_container {
+  display: none;
+}
+
+.show_container {
+  display: block;
+}
+
+.text_color {
+  color: var(--textColor);
+}
+
+.text_md {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text_lg {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .main_container {
   border: 1px solid black;
-  padding: 10px;
 }
 
 .logo_container {
   border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content_container {
   border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.address_container {
+  min-width: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* BILLING ADDRESS */
+
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: -10px;
+}
+
+.billing_address_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputContainer {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* INPUT FIELDS */
+input[type="text"],
+input[type="email"],
+select[name="state"],
+input[type="number"],
+input[type="password"] {
+  border: 1px solid #e2e2e2;
+  height: 30px;
+  width: 85%;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 5px 5px 5px 15px;
+  font-size: 15px;
+  outline: none;
+  color: var(--textColor);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select[name="state"] {
+  height: 40px;
+  width: 248px;
+}
+
+input[name="streetAddressExt"] {
+  margin-top: 15px;
+}
+
+input[type="email"], input[name="streetAddress"], input[name="streetAddressExt"] {
+  width: 92%;
+}
+
+.input_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_flexitem {
+  width: 400px;
+}
+
+.input_position {
+  position: relative;
+}
+
+.email_input {
+  width: 100%;
+}
+
+#createAccount {
+  margin-top: 15px;
+}
+
+#inputLabel {
+  color: var(--formLabel);
+  position: absolute;
+  top: -7px;
+  left: 5px;
+  font-size: 12px;
+  transition: top .5s;
+  margin: 0 8px;
+  padding: 0 7px;
+  background-color: white;
+}
+
+/* SHIPPING METHOD */
+
+.radio_input_container {
+  border: 2px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 5px;
+}
+
+.shipping_method_input {
+  margin-top: 30px;
+}
+
+/* INPUT */
+
+.method_container {
+  border: 2px solid #e2e2e2;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.method_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.method_container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.method_container input:checked~.checkmark {
+  background-color: var(--primary);
+}
+
+.selected_container {
+  border: 2px solid var(--primary);
+  background-color: var(--primary);
+  opacity: 0.1;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.method_container input:checked~.checkmark:after {
+  display: block;
+}
+
+.method_container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+.method_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* INPUT */
+.radio_input_container:first-child {
+  margin-top: 35px;
+}
+
+.radio_content,
+.radio_price {
+  margin-left: 15px;
+}
+
+.radio_img {
+  height: 50px;
+  width: 50px;
+  margin-left: 15%;
+}
+
+.notice_statement {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.notice_statement p {
+  font-size: 12px;
+  color: #828282;
+  margin-left: 10px;
+}
+
+.currency_container {
+  min-width: 300px;
+  border: 1px solid black;
+  padding: 10px;
 }

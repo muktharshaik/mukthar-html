@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js"></script>
   </head>
   <body>
     <div class="main_container">
@@ -19,8 +18,253 @@
         </div>
       </div>
       <div class="content_container">
-        
+        <div class="address_container">
+          <div class="billing_address_container default_box">
+            <div class="heading">
+              <p>Billing Address</p>
+            </div>
+            <div class="billing_address_form">
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <input type="text" name="firstName" id="input" />
+                  <label for="input" id="inputLabel">First Name</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="text" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Last Name</label>
+                </div>
+              </div>
+              <div class="inputContainer">
+                <div class="email_input input_position">
+                  <input type="email" name="email" id="input" />
+                  <label for="email" id="inputLabel">Email Address</label>
+                </div>
+              </div>
+              <div class="inputContainer">
+                <div class="email_input input_position">
+                  <input type="text" name="streetAddress" id="input" />
+                  <input type="text" name="streetAddressExt" id="input" />
+                  <label for="email" id="inputLabel">Street Address</label>
+                </div>
+              </div>
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <select name="state" id="input">
+                    <option value="dubai">Dubai</option>
+                    <option value="abudhabi">Abu Dhabi</option>
+                    <option value="sharjah">Sharjah</option>
+                  </select>
+                  <label for="input" id="inputLabel">State/Province</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="text" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Last Name</label>
+                </div>
+              </div>
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <input
+                    type="number"
+                    name="firstName"
+                    id="input"
+                    counter="disable"
+                  />
+                  <label for="input" id="inputLabel">Zip/Postal Code</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="number" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Phone</label>
+                </div>
+              </div>
+              <div class="inputContainer">
+                <div class="input_checkbox">
+                  <input type="checkbox" id="billingAddress" />
+                  <label class="text_color text_md"
+                    >My billing and shipping address are the same</label
+                  >
+                </div>
+                <div class="input_checkbox">
+                  <input type="checkbox" id="createAccount" />
+                  <label class="text_color text_md"
+                    >Create an account for later use</label
+                  >
+                </div>
+              </div>
+              <div id="passwordContainer" class="hide_container">
+                <div class="inputContainer input_flex">
+                  <div class="input_flexitem input_position">
+                    <input type="password" name="firstName" id="input" />
+                    <label for="input" id="inputLabel">Password</label>
+                  </div>
+                  <div class="input_flexitem input_position">
+                    <input type="password" name="lastName" id="input" />
+                    <label for="input" id="inputLabel">Confirm Password</label>
+                  </div>
+                </div>
+                <div>
+                  <p class="text_color text_md">
+                    Already have an account? <a href="#">Sign in here</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="shippingAddressContainer"
+            class="billing_address_container default_box"
+          >
+            <div class="heading">
+              <p>Shipping Address</p>
+            </div>
+            <div class="billing_address_form">
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <input type="text" name="firstName" id="input" />
+                  <label for="input" id="inputLabel">First Name</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="text" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Last Name</label>
+                </div>
+              </div>
+              <div class="inputContainer">
+                <div class="email_input input_position">
+                  <input type="email" name="email" id="input" />
+                  <label for="email" id="inputLabel">Email Address</label>
+                </div>
+              </div>
+              <div class="inputContainer">
+                <div class="email_input input_position">
+                  <input type="text" name="streetAddress" id="input" />
+                  <input type="text" name="streetAddressExt" id="input" />
+                  <label for="email" id="inputLabel">Street Address</label>
+                </div>
+              </div>
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <select name="state" id="input">
+                    <option value="dubai">Dubai</option>
+                    <option value="abudhabi">Abu Dhabi</option>
+                    <option value="sharjah">Sharjah</option>
+                  </select>
+                  <label for="input" id="inputLabel">State/Province</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="text" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Last Name</label>
+                </div>
+              </div>
+              <div class="inputContainer input_flex">
+                <div class="input_flexitem input_position">
+                  <input
+                    type="number"
+                    name="firstName"
+                    id="input"
+                    counter="disable"
+                  />
+                  <label for="input" id="inputLabel">Zip/Postal Code</label>
+                </div>
+                <div class="input_flexitem input_position">
+                  <input type="number" name="lastName" id="input" />
+                  <label for="input" id="inputLabel">Phone</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping_method_conatiner default_box">
+            <div class="heading">
+              <p>Shipping Method</p>
+            </div>
+            <div class="shipping_method_input">
+              <label id="shippingContainer" class="method_container">
+                <div class="method_content">
+                  <p class="radio_price text_lg">$2.99</p>
+                  <div class="radio_content">
+                    <p>
+                      USPS 1st Class With Tracking <br />
+                      (5 - 13 days) COVID19 Delay
+                    </p>
+                  </div>
+                  <div class="radio_img">
+                    <img src="./post.png" alt="post" />
+                  </div>
+                </div>
+                <input
+                  type="radio"
+                  checked="checked"
+                  name="shipping"
+                  id="shipping"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <label id="shippingContainer" class="method_container">
+                <div class="method_content">
+                  <p class="radio_price text_lg">$9.00</p>
+                  <div class="radio_content">
+                    <p>
+                      USPS PRIORITY With Tracking <br />
+                      (5 - 10 days) COVID19 Delay
+                    </p>
+                  </div>
+                  <div class="radio_img">
+                    <img src="./post_fast.png" alt="potstfast" />
+                  </div>
+                </div>
+                <input type="radio" name="shipping" id="shipping" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="payment_method_container default_box">
+            <div class="heading">
+              <p>Payment Method</p>
+            </div>
+            <div class="shipping_method_input">
+              <label id="shippingContainer" class="method_container">
+                <div class="method_content">
+                  <p class="radio_price text_lg">PayPal</p>
+                  <div class="radio_content">
+                    <p>
+                      You will be redirected to the PayPal website <br />
+                      after submitting your order
+                    </p>
+                  </div>
+                  <div class="radio_img">
+                    <img src="./paypal.svg" alt="post" />
+                  </div>
+                </div>
+                <input
+                  type="radio"
+                  checked="checked"
+                  name="shipping"
+                  id="shipping"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <label id="shippingContainer" class="method_container">
+                <div class="method_content">
+                  <p class="radio_price text_lg">Pay with Credit Card</p>
+                  <div class="radio_img">
+                    <img src="./post_fast.png" alt="potstfast" />
+                  </div>
+                </div>
+                <input type="radio" name="shipping" id="shipping" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="notice_statement">
+              <img src="./lockIcon.svg" alt="payment" />
+              <p>
+                We protect your payment information using encryption to provide
+                bank-level security.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="currency_container"></div>
       </div>
     </div>
   </body>
+
+  <script src="index.js"></script>
 </html>
