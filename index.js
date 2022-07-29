@@ -29,7 +29,6 @@ $(document).ready(() => {
   }
 
   $(document).click((e) => {
-    console.log(e.target.dataset.label);
     slideItem(e.target.dataset.label);
   });
 });
