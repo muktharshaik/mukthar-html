@@ -1,25 +1,35 @@
-var createAccount = document.querySelector("#createAccount");
-var passwordContainer = document.querySelector("#passwordContainer");
-
-createAccount.addEventListener("click", (e) => {
-  if (e.target.checked) {
-    passwordContainer.classList.add("show_container");
-  } else {
-    passwordContainer.classList.remove("show_container");
-  }
-});
-
 // SHIPPING ADDRESS
 
-var billingAddress = document.querySelector("#billingAddress");
-var shippingAddressContainer = document.querySelector(
-  "#shippingAddressContainer"
-);
+$(document).ready(() => {
+  var createAccount = $("#createAccount");
+  var passwordContainer = $("#passwordContainer");
 
-billingAddress.addEventListener("click", (e) => {
-  if (e.target.checked) {
-    shippingAddressContainer.classList.add("hide_container");
-  } else {
-    shippingAddressContainer.classList.remove("hide_container");
+  createAccount.click((e) => {
+    if (e.target.checked) {
+      passwordContainer.addClass("show_container");
+    } else {
+      passwordContainer.removeClass("show_container");
+    }
+  });
+
+  var billingAddress = $("#billingAddress");
+  var shippingAddressContainer = $("#shippingAddressContainer");
+
+  billingAddress.click((e) => {
+    if (e.target.checked) {
+      shippingAddressContainer.addClass("hide_container");
+    } else {
+      shippingAddressContainer.removeClass("hide_container");
+    }
+  });
+
+  function slideItem(label) {
+    $(`#slide_${label}`).slideToggle("slow");
+    $(`#arrow_${label}`).toggleClass("rotate_svg");
   }
+
+  $(document).click((e) => {
+    console.log(e.target.dataset.label);
+    slideItem(e.target.dataset.label);
+  });
 });
